@@ -10,5 +10,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.7",
+    "@types/react": "18.0.24"
   }
 }
