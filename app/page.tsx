@@ -1,13 +1,13 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-// import React, { useEffect } from 'react';
+import { NextRouter, useRouter } from 'next/router';
+import React, { useEffect } from 'react';
+import useUrlHash from '../hooks/useUrlHash';
 
 const Page= () =>{
-   // useEffect(() => {
-   //   console.log("Hallo");
-   // })
-      
+   // const currentHash = useUrlHash("");
+
+   // console.log("curHash: " + currentHash);
 
    return (<>
          <section id="home" className="bg-red-400 min-h-screen">home</section>

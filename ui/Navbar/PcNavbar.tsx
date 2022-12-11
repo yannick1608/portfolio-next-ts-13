@@ -10,7 +10,7 @@ const PcNavbar : NextPage = () =>{
                   <div className="ml-3 text-5xl">H</div>
                   <div className="ml-2 hidden text-3xl group-hover:block">Home</div>
                </Link>
-               <Link href="/#about" className="bg-blackgreylighter hover:bg-teal hover:text-blackgrey text-light group flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-500 hover:w-40">
+               <Link href="/#about" scroll={false} className="bg-blackgreylighter hover:bg-teal hover:text-blackgrey text-light group flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-500 hover:w-40">
                   <div className="ml-3 text-5xl">A</div>
                   <div className="ml-2 hidden text-3xl group-hover:block">About</div>
                </Link>
@@ -22,11 +22,11 @@ const PcNavbar : NextPage = () =>{
                   <div className="ml-3 text-5xl">S</div>
                   <div className="ml-2 hidden text-3xl group-hover:block">Skills</div>
                </Link>
-               {/* <Link href="/contact" className="bg-blackgreylighter hover:bg-teal hover:text-blackgrey text-light group flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-500 hover:w-40">
+               <Link href="/contact" className="bg-blackgreylighter hover:bg-teal hover:text-blackgrey text-light group flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-500 hover:w-40">
                   <div className="ml-3 text-5xl">C</div>
                   <div className="ml-2 hidden text-3xl group-hover:block">Contact</div>
                </Link>
-               <Link className="bg-blackgreylighter hover:bg-teal hover:text-blackgrey text-light group mt-10 flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-500 hover:w-40">
+               {/* <Link className="bg-blackgreylighter hover:bg-teal hover:text-blackgrey text-light group mt-10 flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-500 hover:w-40">
                   <div className="ml-3 text-5xl">D</div>
                   <div className="ml-2 hidden text-3xl group-hover:block">Dark</div>
                </Link>
