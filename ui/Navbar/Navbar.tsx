@@ -1,21 +1,27 @@
-"use client"
-
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
+import useUrlHash from "../../hooks/useUrlHash";
+import MobileMenu from "./MobileMenu";
+import MobileMenuButton from "./MobileMenuButton";
 import PcNavbar from "./PcNavbar";
 
 const Navbar : NextPage = () =>{
-   // const [mobileMenuUnfolded, setMobileMenuUnfolded] = useState<boolean>(false);
-   // //use Effect for disabling the vertical scroller if the mobile menu gets activated
-   // useEffect(() => {
-   //   mobileMenuUnfolded && (document.body.style.overflow = 'hidden');
-   //   !mobileMenuUnfolded && (document.body.style.overflow = 'unset');
-   // }, [mobileMenuUnfolded])
-   
+   const hash = useUrlHash("");
+   const [mobileMenuUnfolded, setMobileMenuUnfolded] = useState<boolean>(false);
+   useEffect(() => {
+      mobileMenuUnfolded && (document.body.style.overflow = 'hidden');
+      !mobileMenuUnfolded && (document.body.style.overflow = 'unset');
+   }, [mobileMenuUnfolded ]);
 
    return(
    <>
       <PcNavbar/>
+      <MobileMenuButton 
+         mobileMenuUnfolded={mobileMenuUnfolded} 
+         setMobileMenuUnfolded={setMobileMenuUnfolded}/>
+      <MobileMenu 
+         mobileMenuUnfolded ={mobileMenuUnfolded}
+         setMobileMenuUnfolded={setMobileMenuUnfolded} />
    </>
    )
 }
