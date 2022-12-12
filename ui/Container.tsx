@@ -29,10 +29,10 @@ const Container : NextPage<any> = (props)=>{
             <meta property="og:title" content={meta.title} />
             {/* <meta property="og:image" content={meta.image} /> */}
          </Head>
-         <Navbar/>
          <main className='md:ml-24'>
             {children}
          </main>
+         <Navbar/>
          <Footer/>
       </div>
    )

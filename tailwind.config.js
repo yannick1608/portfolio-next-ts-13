@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -17,6 +19,11 @@ module.exports = {
         blackgreylighter: '#393E46',
         teal: '#00ADB5',
         light: '#EEEEEE',
+      },
+      fontFamily:{
+        mono: ['var(--slabo-font)', ...fontFamily.mono],
+        sans: ['var(--lato-font)', ...fontFamily.sans],
+        marker: ['var(--permanent_marker-font)', 'var(--slabo-font)', ...fontFamily.mono]
       },
     },
   },

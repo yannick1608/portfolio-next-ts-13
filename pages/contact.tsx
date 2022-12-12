@@ -1,7 +1,5 @@
 import { NextPage } from "next"
-import Head from 'next/head'
 import Container from "../ui/Container"
-import Navbar from "../ui/Navbar/Navbar"
 
 const Home: NextPage = () => {
    return (

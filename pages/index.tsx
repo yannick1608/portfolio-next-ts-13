@@ -1,12 +1,15 @@
 import type { NextPage } from 'next'
+import AboutSection from '../ui/AboutSection'
 import Container from '../ui/Container'
+import ExperienceSection from '../ui/ExperienceSection'
+import HomeSection from '../ui/HomeSection'
 
 const Home: NextPage = () => {
   return (
     <Container>
-      <section id="home" className="bg-red-400 min-h-screen">home</section>
-      <section id="about" className="min-h-screen bg-blue-400">about</section>
-      <section id="experience" className="min-h-screen bg-green-400">experience</section>
+      <HomeSection id="home"/>
+      <AboutSection id="about"/>
+      <ExperienceSection id="experience"/>
       <section id="skills" className="min-h-screen bg-yellow-400">skills</section>
     </Container>
   )
