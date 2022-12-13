@@ -23,8 +23,8 @@ const PcNavbar : NextPage = () =>{
                   SVG={<AboutSvg width={40} height={40}/>}
                />
                <PcNavItem 
-                  href="/#experience"
-                  text = "Experience"
+                  href="/#resume"
+                  text = "Resume"
                   SVG={<ExperienceSvg width={40} height={40}/>}
                />
                <PcNavItem 

@@ -7,8 +7,8 @@ import FreeSquareImg from "../public/freeSquare.jpg"
 const HomeSection : NextPage<any> = ({id}) =>{
    return (
       <div id={id} 
-            className=" bg-slate-500 h-screen flex p-4 md:flex-row flex-col">
-               <div className="bg-orange-400 flex-1 flex flex-col justify-center content-center flex-wrap text-4xl">
+            className=" h-screen flex p-4 xl:p-14 lg:flex-row flex-col">
+               <div className=" flex-1 h-1/2 lg:h-full flex flex-col justify-center items-center flex-wrap text-4xl text-light">
                   <h2 className="">
                      Hey, I'm
                   </h2>
@@ -22,11 +22,14 @@ const HomeSection : NextPage<any> = ({id}) =>{
                      {/* Links to LinkedIn and GitHub*/}
                   </div>
                </div>
-               <div className="bg-lime-500 flex-1 flex md:flex-col justify-center">
+               <div className=" flex-1 h-1/2 lg:h-full flex lg:flex-col justify-center items-center">
+                  <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] max-h-full flex justify-center p-3 bg-gradient-to-r from-[#a1b6c1] via-[#8BC9D2] to-teal aspect-square rounded-3xl">
                   <Image
                      src={HomeImg}
                      alt="Starter Picture"
-                     className=" rounded-3xl object-cover"/>
+                     className="rounded-3xl max-w-full max-h-full object-contain h-auto w-auto"/>
+
+                  </div>
                </div>
       </div>
    )

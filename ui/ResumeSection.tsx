@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-const ExperienceSection : NextPage<any> = ({id}) =>{
+const ResumeSection : NextPage<any> = ({id}) =>{
    return(
       <div id={id}
             className=" h-screen bg-amber-800 flex justify-center">
@@ -11,4 +11,4 @@ const ExperienceSection : NextPage<any> = ({id}) =>{
    )
 }
 
-export default ExperienceSection;
+export default ResumeSection;

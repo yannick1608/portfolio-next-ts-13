@@ -37,8 +37,8 @@ const MobileMenu : NextPage<MobileMenuProps> = ({setMobileMenuUnfolded, mobileMe
                   SVG={<AboutSvg width={40} height={40}/>}
                   closeMobileMenu={closeMobileMenu}/>
             <MobileMenuItem 
-                  href="/#experience"
-                  text = "Experience"
+                  href="/#resume"
+                  text = "Resume"
                   SVG={<ExperienceSvg width={40} height={40}/>}
                   closeMobileMenu={closeMobileMenu}/>
             <MobileMenuItem 
