@@ -23,7 +23,7 @@ const HomeSection : NextPage<any> = ({id}) =>{
                   </div>
                </div>
                <div className=" flex-1 h-1/2 lg:h-full flex lg:flex-col justify-center items-center">
-                  <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] max-h-full flex justify-center p-3 bg-gradient-to-r from-[#a1b6c1] via-[#8BC9D2] to-teal aspect-square rounded-3xl">
+                  <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] max-h-full flex justify-center p-3 bg-gradient-to-r from-[#a1b6c1] via-[#A9C1C9] to-[#436F7D] aspect-square rounded-3xl">
                   <Image
                      src={HomeImg}
                      alt="Starter Picture"

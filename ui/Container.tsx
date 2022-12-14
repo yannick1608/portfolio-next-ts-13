@@ -36,7 +36,7 @@ const Container : NextPage<any> = (props)=>{
           filter="url(#pedroduarteisalegend)"
         ></rect>
       </svg>
-      <div className=" bg-blackgrey">
+      <div className=" bg-[#131313]">
          <Head>
             <title>{meta.title}</title>
             <meta name="robots" content="follow, index" />
