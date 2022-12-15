@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import HomeImg from "../public/HomeQuad_01.jpg"
+import HomeImg from "../public/HomeQuad_01_1200px.jpg"
 import FreeSquareImg from "../public/freeSquare.jpg"
 
 
@@ -28,9 +28,10 @@ const HomeSection : NextPage<any> = ({id}) =>{
                   aspect-square rounded-3xl">
                   <Image
                      src={HomeImg}
-                     alt="Starter Picture"
+                     alt=""
                      className="rounded-3xl max-w-full max-h-full object-contain h-auto w-auto z-50"
-                     unoptimized={true}/>
+                     unoptimized={true}
+                     />
 
                   </div>
                </div>
