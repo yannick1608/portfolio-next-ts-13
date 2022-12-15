@@ -22,7 +22,7 @@ const PcNavItem : NextPage<PcNavItemProps> = ({href, text, SVG}) =>{
                   : "bg-blackgreylighter/80 text-light fill-light", 
                "hover:bg-sweaterdarker hover:text-light hover:fill-light hover:w-48 "
                + "group flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-xl "
-               + "transition-all duration-500 backdrop-blur backdrop-filter")}>
+               + "transition-all duration-500 backdrop-blur backdrop-filter cursor-pointer")}>
          <div className="ml-2">
             {SVG}
          </div>

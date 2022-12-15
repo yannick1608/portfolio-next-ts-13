@@ -3,9 +3,9 @@ import { NextPage } from "next";
 const AboutSection : NextPage<any> = ({id}) =>{
    return(
       <div id={id} className="min-h-screen flex justify-center">
-         <div className=" max-w-5xl bg-slate-700 mx-10 my-36 flex flex-col text-light">
+         <div className=" max-w-5xl bg-slate-700 mx-10 my-28 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">About me</h2>
-            <p className=" text-xl mt-5">My name is Yannick Pfaff and I live in Hessen, Germany.</p>
+            <p className=" text-xl mt-5">My name is Yannick Pfaff and I live in Hesse, Germany.</p>
             <p className=" text-xl mt-3">I am currently working as a full stack developer on an Android-based handheld control panel for painting robots.</p>
             <p className=" text-xl mt-3">I'm studying electrical engineering and information technology dual and will graduate in January 2023 in Computer 
                Engineering (B.Eng.).</p>

@@ -4,7 +4,7 @@ import CollapsibleProgressBar from "./CollapsibleProgressBar";
 const SkillsSection : NextPage<any> = ({id}) =>{
    return(
       <div id={id} className="min-h-screen flex justify-center">
-         <div className=" max-w-5xl mx-10 my-36 flex flex-col text-light">
+         <div className=" max-w-5xl mx-10 my-28 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">Skills</h2>
             <p className=" text-xl mt-5">My interest in programming was mainly aroused by the computer 
             science exam course in high school.</p>
@@ -27,7 +27,7 @@ const SkillsSection : NextPage<any> = ({id}) =>{
                   programming programmable logic controllers, and I concentrated primarily on the basic understanding and processes in a PLC."/>
                </div>
                <div className=" flex-1 flex flex-col gap-5 justify-start">
-                  <CollapsibleProgressBar name="HTML/CSS" minWidthOfTextIfLarge={91} skillInPercentage={75} text="Since they are essential in web development, the use of 
+                  <CollapsibleProgressBar name="HTML/CSS" minWidthOfTextIfLarge={91} skillInPercentage={60} text="Since they are essential in web development, the use of 
                   HTML and CSS has been part of everyday business for years. At the moment I mainly use Tailwind.css for designing because, 
                   despite the higher development speed, you have complete control over the components."/>
                   <CollapsibleProgressBar name="Javascript" minWidthOfTextIfLarge={91} skillInPercentage={70} text="I taught myself this programming language because 

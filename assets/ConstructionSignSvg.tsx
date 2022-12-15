@@ -1,15 +1,11 @@
 type SvgProp = {
-   width : number;
-   height : number;
    classNames? : string
 }
 
-const ConstructionSignSvg : React.FC<SvgProp> = ({width, height, classNames}) =>{
+const ConstructionSignSvg : React.FC<SvgProp> = ({classNames}) =>{
    return <>
       <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
       className={classNames}
       viewBox="0 0 122.88 98.02"
     >

@@ -36,7 +36,7 @@ const Container : NextPage<any> = (props)=>{
           filter="url(#pedroduarteisalegend)"
         ></rect>
       </svg>
-      <div className=" bg-[#131313]">
+      <div className=" bg-[#131313] min-h-screen flex flex-col">
          <Head>
             <title>{meta.title}</title>
             <meta name="robots" content="follow, index" />
@@ -53,7 +53,7 @@ const Container : NextPage<any> = (props)=>{
             <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
             {/* <meta property="og:image" content={meta.image} /> */}
          </Head>
-         <main className='md:ml-24'>
+         <main className='md:ml-24 flex-grow flex-shrink-0 basis-auto'>
             {children}
          </main>
          <Navbar/>
