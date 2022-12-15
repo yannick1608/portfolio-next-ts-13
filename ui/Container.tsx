@@ -18,7 +18,7 @@ const Container : NextPage<any> = (props)=>{
    return (
       <>
       <svg //copied from delba.dev
-        className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light"
+        className="pointer-events-none fixed isolate z-30 opacity-70 mix-blend-soft-light"
         width="100%"
         height="100%"
       >
@@ -47,6 +47,10 @@ const Container : NextPage<any> = (props)=>{
             <meta property="og:site_name" content="Yannick Pfaff" />
             <meta property="og:description" content={meta.description} />
             <meta property="og:title" content={meta.title} />
+            <link rel="shortcut icon" href="/images/favicon.ico" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
             {/* <meta property="og:image" content={meta.image} /> */}
          </Head>
          <main className='md:ml-24'>

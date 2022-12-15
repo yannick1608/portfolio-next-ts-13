@@ -19,6 +19,8 @@ module.exports = {
         blackgreylighter: '#393E46',
         teal: '#00ADB5',
         light: '#EEEEEE',
+        sweater: '#90adbc',
+        sweaterdarker: '#436F7D',
       },
       fontFamily:{
         mono: ['var(--slabo-font)', ...fontFamily.mono],

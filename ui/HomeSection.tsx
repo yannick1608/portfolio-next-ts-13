@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import HomeImg from "../public/quad_WasserkuppeFrontal_mediumKorrekt.jpg"
+import HomeImg from "../public/HomeQuad_01.jpg"
 import FreeSquareImg from "../public/freeSquare.jpg"
 
 
@@ -23,11 +23,14 @@ const HomeSection : NextPage<any> = ({id}) =>{
                   </div>
                </div>
                <div className=" flex-1 h-1/2 lg:h-full flex lg:flex-col justify-center items-center">
-                  <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] max-h-full flex justify-center p-3 bg-gradient-to-r from-[#a1b6c1] via-[#A9C1C9] to-[#436F7D] aspect-square rounded-3xl">
+                  <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] 
+                  max-h-full flex justify-center p-3 bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker 
+                  aspect-square rounded-3xl">
                   <Image
                      src={HomeImg}
                      alt="Starter Picture"
-                     className="rounded-3xl max-w-full max-h-full object-contain h-auto w-auto"/>
+                     className="rounded-3xl max-w-full max-h-full object-contain h-auto w-auto z-50"
+                     unoptimized={true}/>
 
                   </div>
                </div>

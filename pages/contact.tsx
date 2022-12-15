@@ -1,6 +1,8 @@
 import { NextPage } from "next"
+import Image from "next/image";
 import ConstructionSignSvg from "../assets/ConstructionSignSvg"
 import Container from "../ui/Container"
+import Gh from "../public/HomeQuad_01.jpg"
 
 const Home: NextPage = () => {
    return (

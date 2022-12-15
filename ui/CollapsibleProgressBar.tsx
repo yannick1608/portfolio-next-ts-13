@@ -26,7 +26,7 @@ const CollapsibleProgressBar : NextPage<CollapsibleProgressBarProps> = ({name, s
     }, [isOpen]);
 
    return(
-      <button onClick={handleFilterOpening} className=" p-5 transition overflow-hidden shadow-surface-elevation-low hover:shadow-surface-elevation-medium flex-none rounded-xl bg-white/5 duration-300 hover:bg-white/10">
+      <button onClick={handleFilterOpening} className=" transition-all transform hover:scale-[1.01] p-5 overflow-hidden shadow-surface-elevation-low hover:shadow-surface-elevation-medium flex-none rounded-xl bg-white/5 duration-300 hover:bg-white/10">
          <div className="mb-1 flex justify-between lg:hidden">
             <span className="text-xl text-light">{name}</span>
             <CollapseArrowSvg width={25} height={25} className={cn(
@@ -38,8 +38,8 @@ const CollapsibleProgressBar : NextPage<CollapsibleProgressBarProps> = ({name, s
          </div>
          <div className="flex">
             <span className="mr-4 hidden font-mono font-extrabold text-xl text-light lg:block" style={{minWidth: minWidthOfTextIfLarge}}>{name}</span>
-            <div className="h-6 w-full rounded-full bg-[#eeeeee]">
-               <div className="h-6 rounded-full bg-[#436F7D]" style={{width: skillInPercentage+"%"}}></div>
+            <div className="h-6 w-full rounded-full bg-light">
+               <div className="h-6 rounded-full bg-sweaterdarker" style={{width: skillInPercentage+"%"}}></div>
             </div>
             <CollapseArrowSvg width={30} height={30} className={cn(
                isOpen
@@ -49,7 +49,7 @@ const CollapsibleProgressBar : NextPage<CollapsibleProgressBarProps> = ({name, s
             )} />
          </div>
          <div style={{height}} className="transition-all duration-500" >
-               <p ref={ref} className=" pt-5 text-light">{text}</p>
+               <p ref={ref} className="text-lg pt-5 text-light">{text}</p>
          </div>
       </button>
    )
