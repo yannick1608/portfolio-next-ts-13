@@ -4,9 +4,31 @@
 
 html {
    scroll-behavior: smooth;
+   background: black
  }
 
  button {
   all: unset;
   cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #131313; /*same as page-background*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #436F7D; /*same as sweater darker color*/
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #90adbc; /*same as sweater color*/
 }
