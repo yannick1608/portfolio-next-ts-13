@@ -20,13 +20,13 @@ const MobileMenuItem : NextPage<MobileMenuItemProps> = ({href, text, SVG, closeM
             onClick={closeMobileMenu}
             className={cn(
                isActive
-                  ? "bg-teal text-blackgrey fill-blackgrey"
-                  : "bg-blackgreylighter text-light fill-light", 
-               " flex h-14 w-64 cursor-pointer items-center overflow-hidden rounded-xl")}>
+                  ? "bg-sweaterdarker/90 text-light fill-light"
+                  : "bg-blackgreylighter/80 text-light fill-light", 
+               " flex h-16 w-64 cursor-pointer items-center overflow-hidden rounded-xl")}>
          <div className="ml-3">
             {SVG}
          </div>
-         <div className="ml-5 text-3xl group-hover:block">{text}</div>
+         <div className="ml-5 text-4xl group-hover:block">{text}</div>
       </Link>
    )
 }

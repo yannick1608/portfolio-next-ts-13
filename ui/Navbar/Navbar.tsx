@@ -16,12 +16,12 @@ const Navbar : NextPage = () =>{
    return(
    <>
       <PcNavbar/>
-      <MobileMenuButton 
-         mobileMenuUnfolded={mobileMenuUnfolded} 
-         setMobileMenuUnfolded={setMobileMenuUnfolded}/>
       <MobileMenu 
          mobileMenuUnfolded ={mobileMenuUnfolded}
          setMobileMenuUnfolded={setMobileMenuUnfolded} />
+      <MobileMenuButton 
+         mobileMenuUnfolded={mobileMenuUnfolded} 
+         setMobileMenuUnfolded={setMobileMenuUnfolded}/>
    </>
    )
 }
