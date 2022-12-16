@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import Link from "next/link";
 import AboutSvg from "../../assets/AboutSvg";
 import ContactSvg from "../../assets/ContactSvg";
 import ExperienceSvg from "../../assets/ExperienceSvg";
@@ -23,8 +22,8 @@ const PcNavbar : NextPage = () =>{
                   SVG={<AboutSvg width={40} height={40}/>}
                />
                <PcNavItem 
-                  href="/#experience"
-                  text = "Experience"
+                  href="/#resume"
+                  text = "Resume"
                   SVG={<ExperienceSvg width={40} height={40}/>}
                />
                <PcNavItem 

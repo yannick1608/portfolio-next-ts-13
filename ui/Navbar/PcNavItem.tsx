@@ -18,15 +18,15 @@ const PcNavItem : NextPage<PcNavItemProps> = ({href, text, SVG}) =>{
             scroll={false} 
             className={cn(
                isActive
-                  ? "bg-teal text-blackgrey fill-blackgrey"
-                  : "bg-blackgreylighter text-light fill-light", 
-               "hover:bg-teal hover:text-blackgrey hover:fill-blackgrey hover:w-52 "
+                  ? " bg-sweaterdarker/90 text-light fill-light"
+                  : "bg-blackgreylighter/80 text-light fill-light", 
+               "hover:bg-sweaterdarker hover:text-light hover:fill-light hover:w-48 "
                + "group flex h-14 w-14 cursor-pointer items-center overflow-hidden rounded-xl "
-               + "transition-all duration-500")}>
+               + "transition-all duration-500 backdrop-blur backdrop-filter cursor-pointer")}>
          <div className="ml-2">
             {SVG}
          </div>
-         <div className="ml-2 hidden text-3xl group-hover:block">
+         <div className="ml-2 hidden text-3xl font-mono group-hover:block">
                {text}
          </div>
       </Link>

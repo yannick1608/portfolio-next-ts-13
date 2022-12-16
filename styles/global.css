@@ -5,3 +5,8 @@
 html {
    scroll-behavior: smooth;
  }
+
+ button {
+  all: unset;
+  cursor: pointer;
+}
