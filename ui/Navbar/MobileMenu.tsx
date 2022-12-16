@@ -22,10 +22,10 @@ const MobileMenu : NextPage<MobileMenuProps> = ({setMobileMenuUnfolded, mobileMe
                   mobileMenuUnfolded
                   ? "left-0"
                   : "-left-full",
-                  "bg-blackgrey border-light fixed top-0 bottom-0 flex flex-col " +
+                  " bg-pagebackground border-light fixed top-0 bottom-0 flex flex-col " +
                   "justify-center border-r-2 px-4 transition-all duration-300 " +
                   "ease-in-out md:hidden")}>
-         <nav className="flex flex-col gap-1">
+         <nav className="flex flex-col gap-3">
             <MobileMenuItem 
                   href="/#home"
                   text = "Home"

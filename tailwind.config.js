@@ -21,6 +21,7 @@ module.exports = {
         light: '#EEEEEE',
         sweater: '#90adbc',
         sweaterdarker: '#436F7D',
+        pagebackground: '#131313',
       },
       fontFamily: {
         mono: ['var(--slabo-font)', ...fontFamily.mono],
