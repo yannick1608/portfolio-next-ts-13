@@ -1,6 +1,5 @@
 import { NextPage } from "next";
-import BurgerMenuSvg from "../../assets/BurgerMenuSvg";
-import XSvg from "../../assets/XSvg";
+import { Sling as Hamburger } from "hamburger-react";
 
 type MobileMenuButtonProps = {
    setMobileMenuUnfolded(openMobileMenu: boolean): void;
@@ -11,11 +10,8 @@ const MobileMenuButton : NextPage<MobileMenuButtonProps> = ({setMobileMenuUnfold
    return(
       <button
          onClick={() => setMobileMenuUnfolded(!mobileMenuUnfolded)}
-         className="bg-blackgreylighter/80 fill-light stroke-2 stroke-light group 
-                     fixed right-3 top-3 cursor-pointer rounded-xl p-3 md:hidden">
-            {mobileMenuUnfolded
-            ?<XSvg height={50} width={50}/> 
-            :<BurgerMenuSvg height={50} width={50}/>}
+         className="bg-blackgreylighter/80 fixed right-3 top-3 cursor-pointer rounded-xl p-3 md:hidden">
+            <Hamburger toggled={mobileMenuUnfolded} toggle={setMobileMenuUnfolded} size={48} color="#EEEEEE"/>
       </button>
    )
 }
