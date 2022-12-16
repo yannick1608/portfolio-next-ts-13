@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import Link from "next/link";
 import AboutSvg from "../../assets/AboutSvg";
 import ContactSvg from "../../assets/ContactSvg";
 import ExperienceSvg from "../../assets/ExperienceSvg";

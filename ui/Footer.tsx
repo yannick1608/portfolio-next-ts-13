@@ -21,7 +21,9 @@ const Footer : NextPage = () => {
             <div className="flex justify-around flex-wrap items-center">
                {
                   linkItems.map(linkItem =>(
-                     <Link scroll={false} href={linkItem.href} className="cursor-pointer my-2 text-gray-400 hover:text-light mx-10 font-mono">{linkItem.name}</Link>
+                     <Link key={linkItem.name} scroll={false} href={linkItem.href} className="cursor-pointer my-2 text-gray-400 hover:animate-pulse hover:text-light mx-10 font-mono transition-all duration-300">
+                        {linkItem.name}
+                     </Link>
                   ))
                }
             </div>

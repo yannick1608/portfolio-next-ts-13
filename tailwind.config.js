@@ -22,11 +22,23 @@ module.exports = {
         sweater: '#90adbc',
         sweaterdarker: '#436F7D',
       },
-      fontFamily:{
+      fontFamily: {
         mono: ['var(--slabo-font)', ...fontFamily.mono],
         sans: ['var(--lato-font)', ...fontFamily.sans],
         marker: ['var(--permanent_marker-font)', 'var(--slabo-font)', ...fontFamily.mono]
       },
+      keyframes: {
+        wave: {
+          '0%, 60%, 100%': {transform: 'rotate( 0.0deg)'},
+          '10%, 30%': {transform: 'rotate(14.0deg)'},
+          '20%': {transform: 'rotate(-8.0deg)'},
+          '40%': {transform: 'rotate(-4.0deg)'},
+          '50%': {transform: 'rotate(10.0deg)'},
+        }
+      },
+      animation:{
+        wave: 'wave 2.5s linear infinite',
+      }
     },
   },
   plugins: [],

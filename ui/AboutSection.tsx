@@ -2,8 +2,8 @@ import { NextPage } from "next";
 
 const AboutSection : NextPage<any> = ({id}) =>{
    return(
-      <div id={id} className="min-h-screen flex justify-center">
-         <div className=" max-w-5xl bg-slate-700 mx-10 my-28 flex flex-col text-light">
+      <div id={id} className=" flex justify-center">
+         <div className=" max-w-5xl mx-10 my-28 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">About me</h2>
             <p className=" text-xl mt-5">My name is Yannick Pfaff and I live in Hesse, Germany.</p>
             <p className=" text-xl mt-3">I am currently working as a full stack developer on an Android-based handheld control panel for painting robots.</p>
