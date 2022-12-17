@@ -14,7 +14,7 @@ const ResumeSection : NextPage<any> = ({id}) =>{
                                        location="b+m surface systems GmbH, Eiterfeld, Germany"
                                        websiteUrl="https://www.bm-systems.com/en/perfect-solutions-for-surface-finishing/"
                                        imgName="/BuM_Logo.png"
-                                       listItems={["I currently working as a Full Stack Developer",
+                                       listItems={["I'm currently working as a Full Stack Developer",
                                                       "I gained experience in several areas of software development over the past three years"]}/>
                </div>
                <div className=" flex-1 flex flex-col gap-5">

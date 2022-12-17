@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Link from "next/link";
+import UpperLeftArrowSvg from "../assets/UpperLeftArrowSvg";
 
 type LinkItem ={
    name : string,
@@ -27,7 +28,15 @@ const Footer : NextPage = () => {
                   ))
                }
             </div>
-            {/* <div className=" mx-10 text-sweaterdarker/50">This website is an Open Source Project build with Next.js and Tailwindcss</div> */}
+            <p className=" mx-10 text-sweaterdarker/50 self-center md:block hidden">
+               This website is an 
+               <a href="https://github.com/yannick1608/portfolio-next-ts-13"  target="_blank" rel="noopener noreferrer" 
+                  className="hover:text-sweater mx-1 group">
+                  open-source project
+                 <UpperLeftArrowSvg className=" w-2 h-2 rotate-90 group-hover:fill-sweater fill-sweaterdarker/50 flex-initial inline mx-1 align-top mt-2"/>
+               </a> 
+               built with Typescript, Next.js and Tailwindcss
+            </p>
          </div>
       </footer> //TODO: add footer
    )
