@@ -46,14 +46,14 @@ const HomeSection : NextPage<any> = ({id}) =>{
                </div>
                <div className=" flex-1 h-1/2 lg:h-full flex lg:flex-col justify-center items-center">
                   <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] shadow-lg hover:shadow-sweaterdarker
-                  max-h-full flex justify-center p-3 bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker 
-                  aspect-square rounded-3xl">
+                  max-h-full flex justify-center p-10 bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker 
+                  aspect-square rounded-3xl w-[450px] relative">
                   <Image
                      src={HomeImg}
                      alt=""
-                     className="rounded-3xl max-w-full max-h-full object-contain h-auto w-auto z-50 brightness-95"
-                     unoptimized={true}
+                     className="rounded-3xl z-50 brightness-95"
                      priority={true}
+                     fill = {true}
                      />
                   </div>
                </div>
