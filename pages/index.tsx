@@ -6,6 +6,7 @@ import HomeSection from '../ui/HomeSection'
 import SkillsSection from '../ui/SkillsSection'
 import { MutableRefObject, useEffect, useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy';
+
 //scrollspy link for docs: https://github.com/Purii/react-use-scrollspy
 const Home: NextPage = () => {
   const ids : string[] = ["home", "about", "resume", "skills"]
