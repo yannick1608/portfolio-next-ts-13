@@ -26,7 +26,7 @@ const ResumeSection : NextPage<any> = ({id}) =>{
                                        imgName="/HsFulda_Logo.png"
                                        listItems={["I will graduate in Januar 2023",
                                                       "Chosen major: Computer Engineering",
-                                                      "In my bachelor thesis I developed an Industry 4.0 datalogger for painting robots with a three-layer system architecture"]}/>
+                                                      "In my bachelor thesis I developed an Industry 4.0 datalogger with a three-layer system architecture"]}/>
                </div>
             </div>
          </div>
