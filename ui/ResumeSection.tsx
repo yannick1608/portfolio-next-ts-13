@@ -3,7 +3,7 @@ import ResumeCardComponent from "./ResumeCardComponent";
 
 const ResumeSection : NextPage<any> = ({id}) =>{
    return(
-      <div id={id} className="flex justify-center">
+      <section id={id} className="flex justify-center">
          <div className=" max-w-5xl mx-10 my-28 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">Resume</h2>
             <div className=" flex md:flex-row flex-col mt-7 gap-10 md:gap-5">
@@ -30,7 +30,7 @@ const ResumeSection : NextPage<any> = ({id}) =>{
                </div>
             </div>
          </div>
-      </div>
+      </section>
    )
 }
 
