@@ -31,7 +31,7 @@ const HomeSection : NextPage<any> = ({id}) =>{
                         Software Developer
                      </h2>
                      <div className="flex mt-5 gap-5">
-                        <a href="" target="_blank" rel="noopener noreferrer" 
+                        <a href="https://www.linkedin.com/in/yannick-pfaff-32903225b/" target="_blank" rel="noopener noreferrer" 
                         className=" group bg-gradient-to-br from-sweater/80 to-sweaterdarker/80 p-3 rounded-2xl cursor-pointer 
                          transition-all duration-300 shadow-lg hover:scale-110 hover:rounded-3xl hover:shadow-sweaterdarker ease-out">
                            <LinkedInSvg className="h-8 md:h-10 fill-[#131313] transition delay-100 duration-500 group-hover:scale-105 ease-out"/>
