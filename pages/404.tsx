@@ -4,7 +4,7 @@ import Container from "../ui/Container"
 
 const NotFound: NextPage = () => {
    return (
-    <Container>
+    <Container title="Page not found">
       <div className="flex justify-center">
         <div className=" max-w-5xl  mx-5 md:mx-10 my-16 flex flex-col p-4 text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">Error 404</h2>

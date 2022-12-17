@@ -6,19 +6,19 @@ const SkillsSection : NextPage<any> = ({id}) =>{
       <section id={id} className=" flex justify-center">
          <div className=" max-w-5xl mx-10 mt-28 mb-36 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">Skills</h2>
-            <p className=" text-xl mt-5">My interest in programming was mainly aroused by the computer 
+            <p className=" text-xl mt-5">My interest in programming was mainly sparked by the computer 
             science exam course in high school.</p>
             <p className=" text-xl mt-3">During my studies, in addition to OOP, algorithms and data structures, I was able to 
             learn a basic understanding of software development through programming embedded systems.</p>
-            <p className=" text-xl mt-3">At the same time, I was able to expand my skills in 
-            dealing with Git and agile development methods, as well as developing in teams, in the dual practice company.</p>
+            <p className=" text-xl mt-3">At the same time, I was able to expand my skills in dealing 
+            with Git and agile development methods as well as development in teams in a professional environment.</p>
             <div className=" flex md:flex-row flex-col gap-5 mt-5">
                <div className=" flex-1 flex flex-col gap-5">
                   <CollapsibleProgressBar name="C#" minWidthOfTextIfLarge={31} skillInPercentage={75} 
-                  text="With C# I have been able to help develop various 
-                  small to medium-sized projects in a company for over two years. So far I have mainly used the frameworks ASP.net and WPF."/>
+                  text="With C#, I have been able to help develop various small to medium-sized projects at my employer for over 
+                  two years. So far I've mainly used the ASP.net and WPF frameworks."/>
                   <CollapsibleProgressBar name="Java" minWidthOfTextIfLarge={31} skillInPercentage={70} text="I learned the basics mainly in high school and university. 
-                  In the company, I have significantly deepened my knowledge for several months and also gained experience in the development 
+                  In a professional environment, I have significantly deepened my knowledge for several months and also gained experience in the development 
                   of multi-threaded applications."/>
                   <CollapsibleProgressBar name="SQL" minWidthOfTextIfLarge={31} skillInPercentage={80} text="I learned the database language in combination with relational 
                   databases, especially during my studies. In active development, I have mainly worked on databases with Microsoft SQL Server 
