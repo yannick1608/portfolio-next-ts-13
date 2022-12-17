@@ -1,15 +1,11 @@
 type SvgProp = {
-   width : number;
-   height : number;
    className : string;
 }
 
-const UpperLeftArrowSvg : React.FC<SvgProp> = ({width, height, className}) =>{
+const UpperLeftArrowSvg : React.FC<SvgProp> = ({className}) =>{
    return <>
       <svg 
          xmlns="http://www.w3.org/2000/svg" 
-         width={width} 
-         height={height} 
          className={className}
          viewBox="0 0 115.668 115.668">
             <path d="M10.185,5.967h102.499c1.641,0,2.983-1.337,2.983-2.983S114.325,0,112.684,0H0v112.684
