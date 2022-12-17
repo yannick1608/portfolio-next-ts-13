@@ -10,9 +10,10 @@ import cn from 'classnames';
 type MobileMenuProps = {
    setMobileMenuUnfolded(openMobileMenu: boolean): void;
    mobileMenuUnfolded : boolean;
+   activeSection? : string;
 }
 
-const MobileMenu : NextPage<MobileMenuProps> = ({setMobileMenuUnfolded, mobileMenuUnfolded}) =>{
+const MobileMenu : NextPage<MobileMenuProps> = ({setMobileMenuUnfolded, mobileMenuUnfolded, activeSection}) =>{
    const closeMobileMenu = () =>{
       setMobileMenuUnfolded(false);
    }
@@ -38,27 +39,32 @@ const MobileMenu : NextPage<MobileMenuProps> = ({setMobileMenuUnfolded, mobileMe
                      href="/#home"
                      text = "Home"
                      SVG={<HomeSvg width={40} height={40}/>}
-                     closeMobileMenu={closeMobileMenu}/>
+                     closeMobileMenu={closeMobileMenu}
+                     activeSection = {activeSection}/>
                <MobileMenuItem 
                      href="/#about"
                      text = "About"
                      SVG={<AboutSvg width={40} height={40}/>}
-                     closeMobileMenu={closeMobileMenu}/>
+                     closeMobileMenu={closeMobileMenu}
+                     activeSection = {activeSection}/>
                <MobileMenuItem 
                      href="/#resume"
                      text = "Resume"
                      SVG={<ExperienceSvg width={40} height={40}/>}
-                     closeMobileMenu={closeMobileMenu}/>
+                     closeMobileMenu={closeMobileMenu}
+                     activeSection = {activeSection}/>
                <MobileMenuItem 
                      href="/#skills"
                      text = "Skills"
                      SVG={<SkillsSvg width={40} height={40}/>}
-                     closeMobileMenu={closeMobileMenu}/>
+                     closeMobileMenu={closeMobileMenu}
+                     activeSection = {activeSection}/>
                <MobileMenuItem 
                      href="/contact"
                      text = "Contact"
                      SVG={<ContactSvg width={40} height={40}/>}
-                     closeMobileMenu={closeMobileMenu}/>
+                     closeMobileMenu={closeMobileMenu}
+                     activeSection = {activeSection}/>
             </nav>
          </header>
       </>

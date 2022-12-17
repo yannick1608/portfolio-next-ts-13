@@ -5,13 +5,14 @@ import Footer from "./Footer";
 import Navbar from "./Navbar/Navbar";
 
 const Container : NextPage<any> = (props)=>{
-   const { children, ...customMeta} = props;
+   const { children, activeSection, ...customMeta} = props;
 
    const router = useRouter();
    const meta = {
       title: "Yannick Pfaff - Developer",
       description: "Currently dual student working as a Full Stack Developer",
-      type: "website"
+      type: "website",
+      ...customMeta
       // image: "" TODO: add image path to public folder
    }
 
@@ -57,7 +58,7 @@ const Container : NextPage<any> = (props)=>{
          <main className='md:ml-24 flex-grow flex-shrink-0 basis-auto'>
             {children}
          </main>
-         <Navbar/>
+         <Navbar activeSection={activeSection}/>
          <Footer/>
       </div>
       </>

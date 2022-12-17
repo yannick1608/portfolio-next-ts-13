@@ -1,17 +1,20 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import cn from 'classnames';
-import { useRouter } from "next/router";
+import usePathWithHash from "../../hooks/usePathWithHash";
 
 type PcNavItemProps = {
    href : string;
    text : string;
    SVG : React.ReactNode;
+   activeSection? : string;
 }
 
-const PcNavItem : NextPage<PcNavItemProps> = ({href, text, SVG}) =>{
-  const router = useRouter();
-  const isActive = router.asPath === href;
+const PcNavItem : NextPage<PcNavItemProps> = ({href, text, SVG, activeSection}) =>{
+  const urlWithHash = usePathWithHash(""); 
+  const isActive = activeSection == undefined 
+                     ? (href === urlWithHash)
+                     : (href === activeSection)
 
    return (
       <Link href={href} 

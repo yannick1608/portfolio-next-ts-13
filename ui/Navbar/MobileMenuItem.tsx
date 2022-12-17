@@ -2,17 +2,21 @@ import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import cn from 'classnames';
+import usePathWithHash from "../../hooks/usePathWithHash";
 
 type MobileMenuItemProps = {
    href : string;
    text : string;
    SVG : React.ReactNode;
    closeMobileMenu() : void;
+   activeSection? : string;
 }
 
-const MobileMenuItem : NextPage<MobileMenuItemProps> = ({href, text, SVG, closeMobileMenu}) =>{
-  const router = useRouter();
-  const isActive = router.asPath === href;
+const MobileMenuItem : NextPage<MobileMenuItemProps> = ({href, text, SVG, closeMobileMenu, activeSection}) =>{
+  const urlWithHash = usePathWithHash(""); 
+  const isActive = activeSection == undefined 
+                     ? (href === urlWithHash)
+                     : (href === activeSection)
 
    return (
       <Link href={href} 

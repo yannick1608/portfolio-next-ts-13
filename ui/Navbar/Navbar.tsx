@@ -1,12 +1,14 @@
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
-import useUrlHash from "../../hooks/useUrlHash";
 import MobileMenu from "./MobileMenu";
 import MobileMenuButton from "./MobileMenuButton";
 import PcNavbar from "./PcNavbar";
 
-const Navbar : NextPage = () =>{
-   const hash = useUrlHash("");
+type NavbarProps ={
+   activeSection? : string
+}
+
+const Navbar : NextPage<NavbarProps> = ({activeSection}) =>{
    const [mobileMenuUnfolded, setMobileMenuUnfolded] = useState<boolean>(false);
    useEffect(() => {
       mobileMenuUnfolded && (document.body.style.overflow = 'hidden');
@@ -15,10 +17,11 @@ const Navbar : NextPage = () =>{
 
    return(
    <>
-      <PcNavbar/>
+      <PcNavbar activeSection={activeSection}/>
       <MobileMenu 
          mobileMenuUnfolded ={mobileMenuUnfolded}
-         setMobileMenuUnfolded={setMobileMenuUnfolded} />
+         setMobileMenuUnfolded={setMobileMenuUnfolded}
+         activeSection={activeSection}/>
       <MobileMenuButton 
          mobileMenuUnfolded={mobileMenuUnfolded} 
          setMobileMenuUnfolded={setMobileMenuUnfolded}/>

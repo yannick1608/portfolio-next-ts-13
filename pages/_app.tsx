@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       return true
     })
   }, [])
-  
 
   return (
     <>

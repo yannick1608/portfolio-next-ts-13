@@ -7,7 +7,7 @@ import GithubSvg from "../assets/GithubSvg";
 
 const HomeSection : NextPage<any> = ({id}) =>{
    return (
-      <div id={id} 
+      <section id={id} 
             className=" h-screen flex p-4 xl:p-14 lg:flex-row flex-col">
                <div className=" flex-1 h-1/2 lg:h-full flex flex-col justify-center items-start flex-wrap text-light">
                   <div className="flex flex-col items-start flex-wrap gap-2 md:gap-4 ml-10 sm:ml-24 lg:ml-14 xl:ml-24 2xl:ml-32">
@@ -53,10 +53,11 @@ const HomeSection : NextPage<any> = ({id}) =>{
                      alt=""
                      className="rounded-3xl max-w-full max-h-full object-contain h-auto w-auto z-50 brightness-95"
                      unoptimized={true}
+                     priority={true}
                      />
                   </div>
                </div>
-      </div>
+      </section>
    )
 }
 

@@ -3,7 +3,7 @@ import CollapsibleProgressBar from "./CollapsibleProgressBar";
 
 const SkillsSection : NextPage<any> = ({id}) =>{
    return(
-      <div id={id} className="flex justify-center">
+      <section id={id} className=" flex justify-center">
          <div className=" max-w-5xl mx-10 mt-28 mb-36 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">Skills</h2>
             <p className=" text-xl mt-5">My interest in programming was mainly aroused by the computer 
@@ -41,7 +41,7 @@ const SkillsSection : NextPage<any> = ({id}) =>{
                </div>
             </div>
          </div>
-      </div>
+      </section>
    )
 }
 
