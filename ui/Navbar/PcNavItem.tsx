@@ -19,6 +19,7 @@ const PcNavItem : NextPage<PcNavItemProps> = ({href, text, SVG, activeSection}) 
    return (
       <Link href={href} 
             scroll={false} 
+            aria-label={text + " link button"}
             className={cn(
                isActive
                   ? " bg-sweaterdarker/90 text-light fill-light"

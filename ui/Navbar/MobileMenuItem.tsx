@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import cn from 'classnames';
 import usePathWithHash from "../../hooks/usePathWithHash";
 
@@ -22,6 +21,7 @@ const MobileMenuItem : NextPage<MobileMenuItemProps> = ({href, text, SVG, closeM
       <Link href={href} 
             scroll={false} 
             onClick={closeMobileMenu}
+            aria-label={text + " link button"}
             className={cn(
                isActive
                   ? "bg-sweaterdarker/90 text-light fill-light"
