@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   ];
   const activeSectionIndex = useScrollSpy({
     sectionElementRefs: sectionRefs,
-    offsetPx: -100, //negative value for positive offset of viewport top 
+    offsetPx: -400, //negative value for positive offset of viewport top 
   })
   if(typeof ids[activeSectionIndex] === 'undefined') {
     activeSection = undefined;

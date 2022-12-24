@@ -36,7 +36,7 @@ const SkillsSection : NextPage<any> = ({id}) =>{
                   used to build this page)."/>
                   <CollapsibleProgressBar name="C" minWidthOfTextIfLarge={91} skillInPercentage={55} text="I learned C during my studies to understand the general 
                   basics of programming. Later during my studies, it was mainly used when working on embedded systems."/>
-                  <CollapsibleProgressBar name="Algorithms" minWidthOfTextIfLarge={91} skillInPercentage={75} text="Since I think that understanding algorithms and 
+                  <CollapsibleProgressBar name="Algorithms" minWidthOfTextIfLarge={91} skillInPercentage={75} text="Because I think that understanding algorithms and 
                   data structures forms the basis for clean and high-performance code, I completed a suitable additional module during my studies to deepen my knowledge."/>
                </div>
             </div>

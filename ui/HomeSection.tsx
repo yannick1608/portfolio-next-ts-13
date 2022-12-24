@@ -8,9 +8,9 @@ import GithubSvg from "../assets/GithubSvg";
 const HomeSection : NextPage<any> = ({id}) =>{
    return (
       <section id={id} 
-            className=" h-screen flex p-4 xl:p-14 lg:flex-row flex-col">
+            className=" h-screen flex p-4 xl:p-14 lg:flex-row flex-col max-w-[1900px]">
                <div className=" flex-1 h-1/2 lg:h-full flex flex-col justify-center items-start flex-wrap text-light">
-                  <div className="flex flex-col items-start flex-wrap gap-2 md:gap-4 ml-10 sm:ml-24 lg:ml-14 xl:ml-24 2xl:ml-32">
+                  <div className="flex flex-col items-start flex-wrap gap-2 md:gap-4 self-center mr-16">
                      <div className=" flex gap-3 md:gap-5 font-mono">
                         <h2 className="text-4xl sm:text-5xl xl:text-6xl">
                            Hey,
@@ -47,16 +47,25 @@ const HomeSection : NextPage<any> = ({id}) =>{
                   </div>
                </div>
                <div className=" flex-1 h-1/2 lg:h-full flex lg:flex-col justify-center items-center">
-                  <div className="max-w-full duration-500 transition-all transform hover:scale-[1.01] shadow-lg hover:shadow-sweaterdarker
-                  max-h-full flex justify-center p-10 bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker 
-                  aspect-square rounded-3xl w-[450px] relative">
-                  <Image
-                     src={HomeImg}
-                     alt=""
-                     className="rounded-3xl z-50 brightness-95"
-                     priority={true}
-                     fill = {true}
-                     />
+                  <div className="duration-500 transition-all transform md:hover:scale-[1.01] shadow-lg md:hover:shadow-sweaterdarker
+                     flex justify-center bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker 
+                     rounded-3xl mx-5 p-3 md:p-4
+                     w-full max-h-full sm:h-full sm:max-w-full sm:w-auto lg:h-auto lg:w-full lg:max-w-4xl aspect-square">
+                     <div className="h-full w-full relative">
+                        <Image
+                           src={HomeImg}
+                           alt="Home Image"
+                           className="rounded-3xl object-contain brightness-95"
+                           fill = {true}
+                           priority={true}
+                           sizes="(max-width: 500px) 100vw,
+                                    (max-width: 768px) 100vw,
+                                    (max-width: 1200px) 50vw,
+                                    40vw"
+                           placeholder="blur"
+                           quality={100}
+                        />
+                     </div>
                   </div>
                </div>
       </section>
