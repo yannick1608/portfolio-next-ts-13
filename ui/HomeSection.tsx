@@ -3,19 +3,23 @@ import Image from "next/image";
 import HomeImg from "../public/HomeQuad_01_1200px.jpg"
 import LinkedInSvg from "../assets/LinkedInSvg";
 import GithubSvg from "../assets/GithubSvg";
+import { useElementSize } from "usehooks-ts";
+import cn from 'classnames';
 
 
 const HomeSection : NextPage<any> = ({id}) =>{
+   const [imageContainer, { width : imageContainerWidth, height : imageContainerHeight }] = useElementSize()
+   
    return (
       <section id={id} 
             className=" h-screen flex p-4 xl:p-14 lg:flex-row flex-col max-w-[1900px]">
                <div className=" flex-1 h-1/2 lg:h-full flex flex-col justify-center items-start flex-wrap text-light">
-                  <div className="flex flex-col items-start flex-wrap gap-2 md:gap-4 self-center mr-16">
+                  <div className="flex flex-col items-start flex-wrap gap-2 md:gap-4 self-center sm:mr-16">
                      <div className=" flex gap-3 md:gap-5 font-mono">
                         <h2 className="text-4xl sm:text-5xl xl:text-6xl">
                            Hey,
                         </h2>
-                        <div className=" sm:animate-wave origin-[70%_70%] text-3xl sm:text-4xl xl:text-5xl">
+                        <div className=" animate-wave origin-[70%_70%] text-3xl sm:text-4xl xl:text-5xl">
                            👋🏼
                         </div>
                      </div>
@@ -46,22 +50,24 @@ const HomeSection : NextPage<any> = ({id}) =>{
                      </div>
                   </div>
                </div>
-               <div className=" flex-1 h-1/2 lg:h-full flex lg:flex-col justify-center items-center">
-                  <div className="duration-500 transition-all transform md:hover:scale-[1.01] shadow-lg md:hover:shadow-sweaterdarker
-                     flex justify-center bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker 
-                     rounded-3xl mx-5 p-3 md:p-4
-                     w-full max-h-full sm:h-full sm:max-w-full sm:w-auto lg:h-auto lg:w-full lg:max-w-4xl aspect-square">
+               <div className=" flex-1 h-1/2 w-full lg:h-full lg:w-1/2 flex lg:flex-col justify-center items-center" ref={imageContainer}>
+                  <div className={cn(
+                              (imageContainerWidth < imageContainerHeight) //If the container is narrower than it is high, the size is determined by the width, since the height adjusts to square due to the aspect ratio
+                              ?" w-full h-auto lg:max-w-4xl"
+                              :" h-full w-auto",
+                              "duration-500 transition-all transform md:hover:scale-[1.01] shadow-lg md:hover:shadow-sweaterdarker " +
+                              "flex justify-center bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker " +
+                              "rounded-3xl sm:mx-5 p-2 lg:p-4 aspect-square")}>
                      <div className="h-full w-full relative">
                         <Image
                            src={HomeImg}
                            alt="Home Image"
                            className="rounded-3xl object-contain brightness-95"
                            fill = {true}
-                           priority={true}
-                           sizes="(max-width: 500px) 100vw,
-                                    (max-width: 768px) 100vw,
-                                    (max-width: 1200px) 50vw,
-                                    40vw"
+                           priority = {true}
+                           sizes="(max-width: 768px) 100vw,
+                                    (max-width: 1200px) 50vw
+                                    50vw"
                            placeholder="blur"
                            quality={100}
                         />
