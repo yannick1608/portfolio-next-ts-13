@@ -12,7 +12,8 @@ const NotFound: NextPage = () => {
             <Link href="/#home" 
                   className=" group bg-gradient-to-br from-sweater/80 to-sweaterdarker/80 p-3 rounded-2xl cursor-pointer 
                          transition-all duration-300 shadow-lg hover:scale-110 hover:rounded-3xl hover:shadow-sweaterdarker ease-out 
-                         flex justify-center text-4xl font-mono self-center mt-6 font-bold text-pagebackground">
+                         flex justify-center text-4xl font-mono self-center mt-6 font-bold text-pagebackground"
+                  aria-label="Back to home button">
                Return Home
             </Link>
          </div>

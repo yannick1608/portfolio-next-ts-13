@@ -7,9 +7,10 @@ const AboutSection : NextPage<any> = ({id}) =>{
          <div className=" max-w-5xl mx-10 my-28 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">About me</h2>
             <p className=" text-xl mt-5">My name is Yannick Pfaff and I live in Hesse, Germany.</p>
-            <p className=" text-xl mt-3">I am currently working as a full stack developer on an Android-based pendant for industrial robots.</p>
             <p className=" text-xl mt-3">I'm studying electrical engineering and information technology on a dual basis, 
-            I've chosen to specialize in computer engineering and will graduate in January 2023 (B.Eng.).</p>
+            I've chosen to specialize in computer engineering.</p>
+            <p className=" text-xl mt-3">I submitted my bachelor thesis in mid-December, meaning that i will graduate by the end of January 2023 (B.Eng.). 
+            In the meantime I am currently working as a full stack developer on an Android-based pendant for industrial robots.</p>
             <p className=" text-xl mt-3">During the dual studies, I was involved in small, agile teams on various projects and was able 
                to gain experience, especially in .Net web and desktop development, as well as relational database modeling.</p>
             <p className=" text-xl mt-3">Outside of my job, I spend time with friends, do sports or enjoy teaching myself new things. 
