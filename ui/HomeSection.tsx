@@ -15,7 +15,7 @@ const HomeSection : NextPage<any> = ({id}) =>{
                         <h2 className="text-4xl sm:text-5xl xl:text-6xl">
                            Hey,
                         </h2>
-                        <div className=" animate-wave origin-[70%_70%] text-3xl sm:text-4xl xl:text-5xl">
+                        <div className=" sm:animate-wave origin-[70%_70%] text-3xl sm:text-4xl xl:text-5xl">
                            👋🏼
                         </div>
                      </div>
