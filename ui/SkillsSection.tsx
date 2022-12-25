@@ -27,9 +27,9 @@ const SkillsSection : NextPage<any> = ({id}) =>{
                   programming programmable logic controllers, and I concentrated primarily on the basic understanding and processes in a PLC."/>
                </div>
                <div className=" flex-1 flex flex-col gap-5 justify-start">
-                  <CollapsibleProgressBar name="HTML/CSS" minWidthOfTextIfLarge={91} skillInPercentage={60} text="Since they are essential in web development, the use of 
+                  <CollapsibleProgressBar name="HTML/CSS" minWidthOfTextIfLarge={91} skillInPercentage={60} text="Because they are essential in web development, the use of 
                   HTML and CSS has been part of everyday business for years. At the moment I mainly use Tailwindcss for designing because, 
-                  despite the higher development speed, you have complete control over the components."/>
+                  despite the higher development speed, you have complete control over your components."/>
                   <CollapsibleProgressBar name="Javascript" minWidthOfTextIfLarge={91} skillInPercentage={70} text="I taught myself this programming language because 
                   of my great interest in web development. Since I generally prefer static programming languages because of the 
                   better structure, I also learned Typescript. I am currently using React or Next.js for web development (which is also 
