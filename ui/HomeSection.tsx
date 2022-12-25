@@ -8,7 +8,6 @@ import cn from 'classnames';
 
 
 const HomeSection : NextPage<any> = ({id}) =>{
-   const [imageContainer, { width : imageContainerWidth, height : imageContainerHeight }] = useElementSize()
    
    return (
       <section id={id} 
@@ -50,14 +49,10 @@ const HomeSection : NextPage<any> = ({id}) =>{
                      </div>
                   </div>
                </div>
-               <div className=" flex-1 h-1/2 w-full lg:h-full lg:w-1/2 flex lg:flex-col justify-center items-center" ref={imageContainer}>
-                  <div className={cn(
-                              (imageContainerWidth < imageContainerHeight) //If the container is narrower than it is high, the size is determined by the width, since the height adjusts to square due to the aspect ratio
-                              ?" w-full h-auto lg:max-w-4xl"
-                              :" h-full w-auto",
-                              "duration-500 transition-all transform md:hover:scale-[1.01] shadow-lg md:hover:shadow-sweaterdarker " +
-                              "flex justify-center bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker " +
-                              "rounded-3xl sm:mx-5 p-2 lg:p-4 aspect-square")}>
+               <div className=" h-1/2 w-full lg:h-full lg:w-1/2">
+                  <div className="duration-500 transition-all transform md:hover:scale-[1.01] shadow-lg md:hover:shadow-sweaterdarker 
+                                    bg-gradient-to-r from-sweater via-[#A9C1C9] to-sweaterdarker rounded-3xl p-2 lg:p-4 
+                                    object-contain max-w-full max-h-full aspect-square mx-auto lg:my-[40%] xl:my-[20%] 2xl:my-0">
                      <div className="h-full w-full relative">
                         <Image
                            src={HomeImg}
