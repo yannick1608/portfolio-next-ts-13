@@ -19,7 +19,7 @@ const Container : NextPage<any> = (props)=>{
    return (
       <>
       <svg //copied from delba.dev
-        className="pointer-events-none fixed isolate z-30 opacity-70 mix-blend-soft-light"
+        className="pointer-events-none fixed isolate z-30 opacity-70 mix-blend-soft-light sm:block hidden"
         width="100%"
         height="100%"
       >
