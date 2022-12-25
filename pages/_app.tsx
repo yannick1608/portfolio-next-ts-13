@@ -5,6 +5,7 @@ import { Lato } from '@next/font/google'
 import { Permanent_Marker } from '@next/font/google'
 import { useEffect } from 'react';
 import Router from 'next/router';
+import { Analytics } from '@vercel/analytics/react';
 
 const slabo = Slabo_13px({
   weight: "400",
@@ -55,6 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }
       </style>
       <Component {...pageProps} />
+      <Analytics/>
     </>
   )
 }
