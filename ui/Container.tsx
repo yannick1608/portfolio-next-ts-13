@@ -1,3 +1,4 @@
+import { motion, useScroll, useSpring } from "framer-motion";
 import { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -6,7 +7,13 @@ import Navbar from "./Navbar/Navbar";
 
 const Container : NextPage<any> = (props)=>{
    const { children, activeSection, ...customMeta} = props;
-
+   
+   const { scrollYProgress } = useScroll();
+   const scaleX = useSpring(scrollYProgress, {
+      stiffness: 100,
+      damping: 30,
+      restDelta: 0.001
+    });
    const router = useRouter();
    const meta = {
       title: "Yannick Pfaff - Developer",
@@ -18,8 +25,9 @@ const Container : NextPage<any> = (props)=>{
 
    return (
       <>
+      <motion.div className=" fixed top-0 left-0 right-0 h-1.5 bg-sweaterdarker/50 origin-left z-10" style={{ scaleX }} />
       <svg //copied from delba.dev
-        className="pointer-events-none fixed isolate z-30 opacity-70 mix-blend-soft-light sm:block hidden"
+        className="pointer-events-none fixed isolate z-40 opacity-70 mix-blend-soft-light sm:block hidden"
         width="100%"
         height="100%"
       >
