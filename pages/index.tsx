@@ -6,6 +6,7 @@ import HomeSection from '../ui/HomeSection'
 import SkillsSection from '../ui/SkillsSection'
 import { MutableRefObject, useEffect, useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy';
+import ShootingStars from '../ui/ShootingStars'
 
 //scrollspy link for docs: https://github.com/Purii/react-use-scrollspy
 const Home: NextPage = () => {
@@ -36,12 +37,15 @@ const Home: NextPage = () => {
 
 
   return (
+    <>
+    <ShootingStars/>
     <Container activeSection={activeSection}>
       <HomeSection id="home"/>
       <AboutSection id="about"/>
       <ResumeSection id="resume"/>
       <SkillsSection id="skills"/>
     </Container>
+    </>
   )
 }
 
