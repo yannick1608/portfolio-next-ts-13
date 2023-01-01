@@ -1,12 +1,59 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useState } from "react";
+import { ContactFormStates, ContactFormState, ContactBody } from "../lib/types";
 
 const ContactForm : NextPage = () =>{
-   
+   const [fullname, setFullname] = useState("");
+   const [email, setEmail] = useState("");
+   const [message, setMessage] = useState("");
+   const [formState, setFormState] = useState<ContactFormState>({state: ContactFormStates.Initial})
 
+   const [errors, setErrors] = useState<ContactBody>({});
+
+   const checkFormValidation = () : boolean =>{
+      let tempErrors = {};
+      let isValid = true;
+
+      if (fullname.length <= 0) {
+         tempErrors["fullname"] = "Please enter your name. This field cannot be submitted empty.";
+         isValid = false;
+       }
+       if (email.length <= 0) { //insertEmail check here
+         tempErrors["email"] = "Please enter your email address. This field cannot be submitted empty.";
+         isValid = false;
+       }else if(!validateEmail(email)){
+         tempErrors["email"] = "The input hasn't a valid email format.";
+         isValid = false;
+       }
+
+       if (message.length <= 0) {
+         tempErrors["message"] = "Please enter your message. This field cannot be submitted empty.";
+         isValid = false;
+       }
+
+       setErrors({...tempErrors});
+       return isValid;
+   }
+
+   const validateEmail = (email : String) : boolean => {
+      const regex = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+      return regex.test(email.toLowerCase());
+    };
 
    const handleSubmit =async (e : React.FormEvent) => {
       e.preventDefault();
+      setFormState({state: ContactFormStates.Loading})
+
+      let isContactValid = checkFormValidation();
+
+      if (isContactValid) {
+         const body : ContactBody = {
+            email: email,
+            fullname: fullname,
+            message: message,
+         }
+         console.log(body)
+      }
 
       //implement everything for submitting forms
    }
@@ -14,7 +61,8 @@ const ContactForm : NextPage = () =>{
    return(
       <form 
          onSubmit={handleSubmit}
-         className="bg-light/5 rounded-2xl p-5 my-5 flex flex-col gap-1">
+         className="bg-light/5 rounded-2xl p-5 my-5 flex flex-col gap-1"
+         noValidate>
             <label
                htmlFor="fullname"
                className="text-xl text-light font-mono">
@@ -25,12 +73,19 @@ const ContactForm : NextPage = () =>{
                type="text"
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
                   border-b ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0"
-               placeholder="Enter your name">
+               placeholder="Enter your name"
+               value={fullname}
+               onChange={(event)=>{
+                  setFullname(event.target.value);
+               }}>
             </input>
-            <p 
+            {errors?.fullname && (
+               <p 
                className=" text-red-400">
-               Please enter your name. This field cannot be submitted empty.
-            </p>
+                  {errors?.fullname}
+               </p>
+            )}
+
             
             <label
                htmlFor="email"
@@ -42,12 +97,20 @@ const ContactForm : NextPage = () =>{
                type="email"
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
                   border-b ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0"
-               placeholder="Enter your email">
+               placeholder="Enter your email"
+               value={email}
+               onChange={(event)=>{
+                  setEmail(event.target.value);
+               }} >
             </input>
-            <p 
+            {errors?.email && (
+               <p 
                className=" text-red-400">
-               Please enter your email address. This field cannot be submitted empty.
-            </p>
+                  {errors?.email}
+               </p>
+            )}
+
+            
             
             <label
                htmlFor="message"
@@ -58,12 +121,18 @@ const ContactForm : NextPage = () =>{
                name="message"
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
                   border-b ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 max-h-44"
-               placeholder="Enter your message">
+               placeholder="Enter your message"
+               value={message}
+               onChange={(event)=>{
+                  setMessage(event.target.value);
+               }} >
             </textarea>
-            <p 
+            {errors?.message && (
+               <p 
                className=" text-red-400">
-               Please enter your message. This field cannot be submitted empty.
-            </p>
+                  {errors?.message}
+               </p>
+            )}
 
             <button
                type="submit"
@@ -73,12 +142,19 @@ const ContactForm : NextPage = () =>{
                Send
             </button>
 
-            <p className=" text-sweater">The message was sent succesfull! Thank you! I'll answer you as soon as possible.</p>
-            <p className=" text-red-400">There was an error, while sending. So please send me an email to
-               <a href="mailto:contact@yannick.page" className=" rounded-xl hover:bg-light/5 px-1">
-                 contact@yannick.page
-              </a>
-            </p>
+            {formState.state === ContactFormStates.Success && (
+               <p className=" text-sweater">
+                  The message was sent succesfull! Thank you! I'll answer you as soon as possible.
+               </p>
+            )}
+            {formState.state === ContactFormStates.Error && (
+               <p className=" text-red-400">There was an error, while sending. So please send me an email to
+                  <a href="mailto:contact@yannick.page" className=" rounded-xl hover:bg-light/5 px-1">
+                     contact@yannick.page
+                  </a>
+               </p>
+            )}
+            
 
 
       </form>
