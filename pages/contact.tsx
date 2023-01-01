@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import ConstructionSignSvg from "../assets/ConstructionSignSvg"
+import ContactForm from "../ui/ContactForm"
 import Container from "../ui/Container"
 
 const Contact: NextPage = () => {
@@ -14,7 +15,8 @@ const Contact: NextPage = () => {
                  contact@yannick.page
               </a>
             </p>
-            <ConstructionSignSvg className="fill-light mt-10 max-w-xl self-center"/>
+            {/* <ConstructionSignSvg className="fill-light mt-10 max-w-xl self-center"/> */}
+            <ContactForm/>
          </div>
       </div>
     </Container>
