@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React, { useState } from "react";
+import RingLoader from "react-spinners/RingLoader";
 import { ContactFormStates, ContactFormState, ContactBody } from "../lib/types";
 
 const ContactForm : NextPage = () =>{
@@ -53,9 +54,19 @@ const ContactForm : NextPage = () =>{
             message: message,
          }
          console.log(body)
+         let success = true;
+         if (success) {
+            setFormState({state: ContactFormStates.Success})
+            setFullname("");
+            setEmail("");
+            setMessage("");
+         }else{
+            setFormState({state: ContactFormStates.Error})
+            
+         }
+      }else{
+         setFormState({state: ContactFormStates.Initial})
       }
-
-      //implement everything for submitting forms
    }
 
    return(
@@ -72,20 +83,19 @@ const ContactForm : NextPage = () =>{
                name="fullname"
                type="text"
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
-                  border-b ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0"
+                  ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 disabled:bg-light/10 border-b-0"
                placeholder="Enter your name"
                value={fullname}
                onChange={(event)=>{
                   setFullname(event.target.value);
-               }}>
-            </input>
+               }}
+               disabled={formState.state === ContactFormStates.Loading}/>
             {errors?.fullname && (
                <p 
                className=" text-red-400">
                   {errors?.fullname}
                </p>
             )}
-
             
             <label
                htmlFor="email"
@@ -96,21 +106,19 @@ const ContactForm : NextPage = () =>{
                name="email"
                type="email"
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
-                  border-b ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0"
+                  ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 disabled:bg-light/10 border-b-0"
                placeholder="Enter your email"
                value={email}
                onChange={(event)=>{
                   setEmail(event.target.value);
-               }} >
-            </input>
+               }} 
+               disabled={formState.state === ContactFormStates.Loading}/>
             {errors?.email && (
                <p 
                className=" text-red-400">
                   {errors?.email}
                </p>
             )}
-
-            
             
             <label
                htmlFor="message"
@@ -120,27 +128,38 @@ const ContactForm : NextPage = () =>{
             <textarea 
                name="message"
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
-                  border-b ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 max-h-44"
+                  ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 disabled:bg-light/10 border-b-0 max-h-44"
                placeholder="Enter your message"
                value={message}
                onChange={(event)=>{
                   setMessage(event.target.value);
-               }} >
-            </textarea>
+               }} 
+               disabled={formState.state === ContactFormStates.Loading}/>
             {errors?.message && (
                <p 
                className=" text-red-400">
                   {errors?.message}
                </p>
             )}
-
-            <button
-               type="submit"
-               className="bg-gradient-to-br from-sweater/80 to-sweaterdarker/80 p-3 rounded-2xl cursor-pointer 
-               transition-all duration-300 shadow-lg hover:scale-110 hover:rounded-3xl hover:shadow-sweaterdarker ease-out 
-               flex justify-center text-xl font-mono self-start mt-2 font-bold text-pagebackground">
-               Send
-            </button>
+            <div className="flex items-center mt-2 gap-5">
+               <button
+                  type="submit"
+                  className="bg-gradient-to-br from-sweater/80 to-sweaterdarker/80 p-3 rounded-2xl enabled:cursor-pointer 
+                  transition-all duration-300 shadow-lg enabled:hover:scale-110 enabled:hover:rounded-3xl enabled:hover:shadow-sweaterdarker ease-out 
+                  flex justify-center text-xl font-mono font-bold text-pagebackground
+                  disabled:from-light/10 disabled:to-light/10 disabled:text-gray-500"
+                  disabled={formState.state === ContactFormStates.Loading}
+                  >
+                  Send
+               </button>
+               
+               {formState.state === ContactFormStates.Loading && (
+                  <RingLoader 
+                     color="#EEEEEE"
+                     size={45}
+                     />
+               )}
+            </div>
 
             {formState.state === ContactFormStates.Success && (
                <p className=" text-sweater">
@@ -154,9 +173,6 @@ const ContactForm : NextPage = () =>{
                   </a>
                </p>
             )}
-            
-
-
       </form>
    )
 }
