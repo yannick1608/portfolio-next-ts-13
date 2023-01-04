@@ -38,8 +38,8 @@ module.exports = {
         },
         'shootingstar-tr': {
           '0%': {transform: 'rotate(315deg) translateX(0)', opacity: 1},
-          '8%': {opacity: 1},
-          '12%': {transform: 'rotate(315deg) translateX(-2500px)', opacity: 0},
+          '88%': {transform: 'rotate(315deg) translateX(0)', opacity: 1},
+          '92%': {opacity: 1},
           '100%': {transform: 'rotate(315deg) translateX(-2500px)', opacity: 0}
         },
         'shootingstar-tl': {
