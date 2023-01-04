@@ -48,21 +48,28 @@ const ContactForm : NextPage = () =>{
       let isContactValid = checkFormValidation();
 
       if (isContactValid) {
-         const body : ContactBody = {
-            email: email,
-            fullname: fullname,
-            message: message,
-         }
-         console.log(body)
-         let success = true;
-         if (success) {
+         const response : Response = await fetch("/api/sendmail", {
+            body: JSON.stringify({
+               email: email,
+               fullname: fullname,
+               message: message,
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+          });
+
+         if (response.status == 200) {
             setFormState({state: ContactFormStates.Success})
             setFullname("");
             setEmail("");
             setMessage("");
          }else{
             setFormState({state: ContactFormStates.Error})
-            
+            const { error } : { error : string }= await response.json();
+
+            console.log(error);
          }
       }else{
          setFormState({state: ContactFormStates.Initial})
@@ -89,7 +96,8 @@ const ContactForm : NextPage = () =>{
                onChange={(event)=>{
                   setFullname(event.target.value);
                }}
-               disabled={formState.state === ContactFormStates.Loading}/>
+               disabled={formState.state === ContactFormStates.Loading || 
+                  formState.state === ContactFormStates.Success}/>
             {errors?.fullname && (
                <p 
                className=" text-red-400">
@@ -112,7 +120,8 @@ const ContactForm : NextPage = () =>{
                onChange={(event)=>{
                   setEmail(event.target.value);
                }} 
-               disabled={formState.state === ContactFormStates.Loading}/>
+               disabled={formState.state === ContactFormStates.Loading || 
+                  formState.state === ContactFormStates.Success}/>
             {errors?.email && (
                <p 
                className=" text-red-400">
@@ -127,14 +136,17 @@ const ContactForm : NextPage = () =>{
             </label>
             <textarea 
                name="message"
+               maxLength={400}
                className=" rounded-lg bg-light py-1 px-4 text-pagebackground placeholder-gray-500 
-                  ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 disabled:bg-light/10 border-b-0 max-h-44"
+                  ring-sweater text-lg outline-sweater focus:ring-2 focus:outline-0 disabled:bg-light/10 
+                  border-b-0 max-h-44 h-32"
                placeholder="Enter your message"
                value={message}
                onChange={(event)=>{
                   setMessage(event.target.value);
                }} 
-               disabled={formState.state === ContactFormStates.Loading}/>
+               disabled={formState.state === ContactFormStates.Loading || 
+                  formState.state === ContactFormStates.Success}/>
             {errors?.message && (
                <p 
                className=" text-red-400">
@@ -148,7 +160,8 @@ const ContactForm : NextPage = () =>{
                   transition-all duration-300 shadow-lg enabled:hover:scale-110 enabled:hover:rounded-3xl enabled:hover:shadow-sweaterdarker ease-out 
                   flex justify-center text-xl font-mono font-bold text-pagebackground
                   disabled:from-light/10 disabled:to-light/10 disabled:text-gray-500"
-                  disabled={formState.state === ContactFormStates.Loading}
+                  disabled={formState.state === ContactFormStates.Loading || 
+                     formState.state === ContactFormStates.Success}
                   >
                   Send
                </button>
