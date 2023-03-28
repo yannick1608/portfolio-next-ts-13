@@ -49,7 +49,7 @@ const MobileMenu : NextPage<MobileMenuProps> = ({setMobileMenuUnfolded, mobileMe
                      activeSection = {activeSection}/>
                <MobileMenuItem 
                      href="/#resume"
-                     text = "Resume"
+                     text = "Résumé"
                      SVG={<ExperienceSvg width={40} height={40}/>}
                      closeMobileMenu={closeMobileMenu}
                      activeSection = {activeSection}/>

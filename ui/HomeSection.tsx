@@ -31,7 +31,7 @@ const HomeSection : NextPage<any> = ({id}) =>{
                         </h1>
                      </div>
                      <h2 className=" text-2xl sm:text-3xl xl:text-3xl">
-                        Software Developer
+                        Software Engineer
                      </h2>
                      <div className="flex mt-5 gap-5">
                         <a href="https://www.linkedin.com/in/yannick-pfaff-32903225b/" target="_blank" rel="noopener noreferrer" 

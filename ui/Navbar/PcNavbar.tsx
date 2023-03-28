@@ -29,7 +29,7 @@ const PcNavbar : NextPage<PcNavbarProps> = ({activeSection}) =>{
                />
                <PcNavItem 
                   href="/#resume"
-                  text = "Resume"
+                  text = "Résumé"
                   SVG={<ExperienceSvg width={40} height={40}/>}
                   activeSection = {activeSection}
                />

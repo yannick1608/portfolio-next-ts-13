@@ -15,15 +15,18 @@ const ResumeCardComponent : NextPage<ResumeCardComponentProps> = ({heading, peri
    return(
          <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center bg-light/5 rounded-xl hover:bg-light/10
           transition-all transform hover:scale-[1.01] duration-300 cursor-pointer">
-            <div className=" relative w-full aspect-[8/2] bg-light rounded-t-lg">
-               <Image src={imgName} 
-                     alt="" 
-                     className="object-contain " 
-                     fill={true} 
-                     sizes="(max-width: 768px) 100vw,
-                              (max-width: 1200px) 50vw,
-                              40vw"/>
+            <div className=" relative w-full aspect-[8/2] bg-light  rounded-t-lg">
+               <div className=" absolute h-[90%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 aspect-[8/2]">
+                  <Image src={imgName} 
+                        alt="" 
+                        className="object-contain" 
+                        fill={true} 
+                        sizes="(max-width: 768px) 100vw,
+                                 (max-width: 1200px) 50vw,
+                                 40vw"/>
+               </div>
             </div>
+
             <div className="flex flex-col justify-between p-4 text-light text-lg">
                <div className=" flex justify-between p-1">
                   <h4 className="text-2xl font-bold flex-1">{heading}</h4>

@@ -11,7 +11,7 @@ const Footer : NextPage = () => {
    const linkItems : LinkItem[] = [
                                     {name: "Home", href: "/#home"},
                                     {name: "About", href: "/#about"},
-                                    {name: "Resume", href: "/#resume"},
+                                    {name: "Résumé", href: "/#resume"},
                                     {name: "Skills", href: "/#skills"},
                                     {name: "Contact", href: "/contact"},
                                  ]

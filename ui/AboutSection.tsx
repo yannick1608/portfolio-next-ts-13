@@ -7,14 +7,14 @@ const AboutSection : NextPage<any> = ({id}) =>{
          <div className=" max-w-5xl mx-10 my-28 flex flex-col text-light">
             <h2 className=" md:text-5xl text-3xl font-mono font-black">About me</h2>
             <p className=" text-xl mt-5">My name is Yannick Pfaff and I live in Hesse, Germany.</p>
-            <p className=" text-xl mt-3">I'm studying electrical engineering and information technology on a dual basis, 
-            I've chosen to specialize in computer engineering.</p>
-            <p className=" text-xl mt-3">I submitted my bachelor thesis in mid-December, meaning that i will graduate by the end of January 2023 (B.Eng.). 
-            In the meantime I am currently working as a full stack developer on an Android-based pendant for industrial robots.</p>
-            <p className=" text-xl mt-3">During the dual studies, I was involved in small, agile teams on various projects and was able 
-               to gain experience, especially in .Net web and desktop development, as well as relational database modeling.</p>
+            <p className=" text-xl mt-3">I've studied electrical engineering and information technology on a dual basis.
+            I graduated in computer engineering in January 2023 (B.Eng.).</p>
+            <p className=" text-xl mt-3">I am currently working as a software engineer with a great team 
+            using state-of-the-art technologies to migrate existing systems to the cloud.</p>
+            <p className=" text-xl mt-3">In doing so, I am learning a lot about the architecture of distributed systems, 
+            so that the highest possible resilience, evolvability and scalability is ensured.</p>
             <p className=" text-xl mt-3">Outside of my job, I spend time with friends, do sports or enjoy teaching myself new things. 
-            Most recently, I've got a understanding of modern web development. To apply the learned knowledge, I built this website using 
+            One example for this was the understanding of modern web development. To apply the learned knowledge, I built this website using 
             Typescript, Next.js and Tailwindcss as an 
                <a href="https://github.com/yannick1608/portfolio-next-ts-13"  target="_blank" rel="noopener noreferrer" 
                   className="text-sweater rounded-xl hover:bg-light/5 ml-2">
