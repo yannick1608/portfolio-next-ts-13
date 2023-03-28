@@ -16,8 +16,8 @@ const Container : NextPage<any> = (props)=>{
     });
    const router = useRouter();
    const meta = {
-      title: "Yannick Pfaff - Developer",
-      description: "Currently dual student working as a Full Stack Developer",
+      title: "Yannick Pfaff - Software Engineer",
+      description: "I'm working on cloud friendly microservices with state-of-the-art technologies",
       type: "website",
       ...customMeta
       // image: "" TODO: add image path to public folder
