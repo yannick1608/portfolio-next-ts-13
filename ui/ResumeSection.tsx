@@ -21,7 +21,7 @@ const ResumeSection : NextPage<any> = ({id}) =>{
                                        location="QAware GmbH, Remote, Germany"
                                        websiteUrl="https://www.qaware.de/en/"
                                        imgName="/QAware_Logo.png"
-                                       listItems={["I'm currently working on cloud-freindly microservices in the insurance sector"]}/>
+                                       listItems={["I'm currently working on cloud-friendly microservices in the insurance sector"]}/>
                </div>
                <div className=" flex-1 flex flex-col gap-5">
                   <h3 className=" text-2xl font-bold">Education</h3>
